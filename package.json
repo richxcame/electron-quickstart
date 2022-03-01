@@ -10,5 +10,8 @@
     "electron"
   ],
   "author": "Baygeldi Cholukov",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^17.1.0"
+  }
 }
