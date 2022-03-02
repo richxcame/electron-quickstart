@@ -1,16 +1,11 @@
-const { app, BrowserWindow } = require('electron');
-const path = require('path');
+const { app, BrowserWindow } = require("electron");
 
 const createWindow = () => {
-	let win = new BrowserWindow({
-		webPreferences: {
-			preload: path.join(__dirname, 'preload.js'),
-		},
-	});
-	win.maximize();
-	win.loadFile('./index.html');
+  let win = new BrowserWindow();
+  win.maximize();
+  win.loadURL("https://github.com");
 };
 
-app.whenReady().then(() => {
-	createWindow();
-});
+app.on("ready", () => {
+  createWindow();
+})
